@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'Cera Pro Light';
+    src: url('Fonts/CeraPro-Light.eot');
+    src: url('Fonts/CeraPro-Light.eot?#iefix') format('embedded-opentype'),
+    url('Fonts/CeraPro-Light.woff') format('woff'),
+    url('Fonts/CeraPro-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+* {
+    font-family: 'Cera Pro Light';
+    font-size: 20px;
+    box-sizing: border-box;
+}
+html {
+    height: calc(100%);
+    min-height: calc(100%);
+  }
+.body{
+    background: url("../assets/navBar.png") no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+    display: table;
+    margin: 0 auto;
+}
+body{
+    height:100%;
+}
+
+.aligner{
+    display: table;
+    height: 100%;
+    margin: 0 auto;
+    visibility: hidden;
+}
+.alignerAnimate{
+    animation: 1s ease-out 0s 1 slideInFromTop forwards;
+
+}
+.searchLoc{
+    display: table-cell;
+    vertical-align: middle;
+    text-align:center;     
+}
+#form{
+    background-color: rgb(255, 255, 255);
+    margin-top: 25px;
+    padding:25px;
+    padding-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 5px 10px 15px #8d1651;
+    display: table-cell;
+    line-height: 0px; 
+    border: 1.5px solid rgb(0, 0, 0);
+
+}
+input{
+    border: 0px 0px 0px 5px;
+    padding: 15px;
+    margin:25px;
+    border-radius: 5px;
+    border: 1.5px solid rgb(71, 71, 71);
+}
+img:not(#loadingImg){
+    height:49px;
+    position: relative;;
+    top:13px
+}
+button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 130px;
+    height: 45px;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1.5px solid rgb(90, 89, 89);
+    background-color: rgb(232, 19, 77);
+    color: white;
+    transition: 0.3s;
+
+
+}
+
+button:hover{
+    color: white;
+    border: 1.5px solid rgb(0, 0, 0);
+    background-color:#3e8e41;
+    transition: 0.3s;
+}
+@keyframes slideInFromTop{
+    0%{
+        visibility: visible;
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+        visibility: visible;
+    }
+}
+
+.displayNone{
+    display: none;
+
+}
+.bodyLoading{
+    overflow: hidden;
+    background-color: rgb(26, 25, 25);
+    transition: 0.3sec;
+}
+#locInfo, #userInfo{
+    position: absolute;
+    bottom:0px;
+    background-color: rgb(214, 20, 85);
+    padding: 5px;
+    border-radius: 5px 5px 0px 0px;
+    color:white;
+    visibility: hidden;
+    transition: .3s;
+    text-align: center;
+}
+.loading{
+    animation: 1s ease-out 0s 1 slideInFromTop;
+}
+@keyframes entry{
+    0%{
+        visibility: visible;
+        transform: translateY(100%);
+    }
+    100%{
+        visibility: visible;
+        transform: translateY(0%);
+    }
+}
+.anime{
+    animation: 0.5s ease-in 0s 1 entry forwards;
+}
+
+#loadingImg{
+    height: 50px;
+}

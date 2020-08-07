@@ -1,0 +1,251 @@
+@font-face {
+    font-family: 'Cera Pro Light';
+    src: url('Fonts/CeraPro-Light.eot');
+    src: url('Fonts/CeraPro-Light.eot?#iefix') format('embedded-opentype'),
+    url('Fonts/CeraPro-Light.woff') format('woff'),
+    url('Fonts/CeraPro-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face{
+        font-family: 'Muli Semi-Bold Italic';
+        src: url('Fonts/Muli-SemiBold-Italic.ttf.eot');
+    src: url('Fonts/Muli-SemiBold-Italic.ttf.eot?#iefix') format('embedded-opentype'),
+    url('Fonts/Muli-SemiBold-Italic.ttf.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+*{
+    font-family: "Cera Pro Light";
+    box-sizing: border-box;
+}
+html,body {
+    height: calc(100% + 60px);
+    min-height: calc(100% + 60px);
+  }
+.bodyLoading{
+    overflow: hidden;
+    background-color: rgb(26, 25, 25);
+    transition: 0.3sec;
+}
+.loading{
+    animation: 1s ease-out 0s 1 slideInFromTop;
+}
+.displayNone{
+    display: none;
+}
+img:not(#loadingImg){
+    border-radius: 5px;
+    position: relative;
+    height: 29px;
+    top:4.5px
+}
+@keyframes slideInFromTop{
+    0%{
+        transform: translateY(-100%);
+        visibility: visible;    }
+    100%{
+        transform: translateY(0%);
+visibility: visible;   
+ }
+}
+@keyframes slideInFromSide{
+    0%{
+        transform:translateX(-100%);
+        visibility: visible;
+    }
+    100%{
+        transform:translateX(0%);
+        visibility: visible;
+    }
+}
+.container, .weatherContainer, .timeContainer,#weatherContainer{will-change: transform;}
+h1{
+    padding-left: 4px;
+    margin-left: 4px;
+}
+h2, h3{
+    padding-left: 8px;
+    margin-left: 8px;
+}
+.body{
+    background: url("../assets/mainBG.jpg") no-repeat center center fixed;
+    background-size: cover;
+    overflow: auto;
+}
+
+.container{
+    background: url("../assets/1.jpg") no-repeat center center fixed;
+    background-size: cover;
+    overflow: auto;
+    margin: 5px auto;
+    width: 95%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1.5px solid rgb(0, 0, 0);
+    box-shadow: 5px 6px 15px #9b1e5c;
+    visibility: hidden;
+}
+.containerAnimation{    display: visible;
+    animation: 1s ease-out 1s 1 slideInFromSide forwards;    
+}
+.welcome{
+    color:white;
+    font-family:  'Cera Pro Light';
+}
+#quote{
+    padding-left: 35px;
+    padding-bottom: 15px;
+}
+.quoteContainer{
+    background: url("../assets/quoteBG.jpg") fixed;
+    background-size: cover;
+    display: table;
+    margin: 5px auto;
+    padding-top:0px;
+    width: 95%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1.5px solid rgb(0, 0, 0);
+    box-shadow: 5px 6px 15px #a0cf6a;
+    visibility: hidden;
+}
+.quoteContainerAnimation{
+    display: visible;
+    animation: 1s ease-out 4s 1 slideInFromSide forwards;   }
+a{
+    font-family: 'Muli Semi-Bold Italic';
+}
+.topnav{
+    font-family: 'Muli Semi-Bold Italic';
+    z-index: 1;
+    background-image: url("../assets/navBar.jpg");
+    background-size: cover;
+    border-radius: 5px;
+    border: 1.5px solid rgb(0, 0, 0);
+    left: 0px;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    visibility: hidden;    
+}
+.topnavAnimation{    
+    animation: 1s ease-out 0s 1 slideInFromTop forwards;}
+.topnav a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-right: 1.5px solid rgb(0, 0, 0);
+}
+.topnav a:first-child{
+    background-color: #d61454;
+}
+.second{
+background-color: #c0075e;
+}
+.topnav a:last-child{
+    border-right: 0px;
+    border-left:1.5px solid rgb(0, 0, 0);
+    background-color: #5b3189;
+    float: right;
+}
+.topnav a:hover{
+    background-color: lightcoral;
+    color: black;
+}
+.topnav a.active {
+    color: white;
+    background-color:#3e8e41;
+    pointer-events: none;
+    cursor: default;
+  }
+.timeContainer{
+    background: url("../assets/time.jpg") no-repeat center center fixed;
+    background-size: cover;
+    margin: 5px auto;
+    width: 95%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1.5px solid rgb(0, 0, 0);
+    box-shadow: 5px 6px 10px #4489b1;
+    visibility: hidden;
+}
+.timeContainerAnimation{    display: visible;
+    animation: 1s ease-out 2s 1 slideInFromSide forwards;}
+.weatherContainer{
+    background: url("../assets/weather.jpg") no-repeat center center fixed;
+    background-size: cover;
+    margin: 5px auto;
+    width: 95%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1.5px solid rgb(0, 0, 0);
+    box-shadow: 5px 6px 15px #4b0b13;
+    visibility: hidden;
+}
+.weatherContainerAnimation{     display: visible;
+    animation: 1s ease-out 3s 1 slideInFromSide forwards; }
+.textTime{
+    color:white;
+}
+#setTimezone, .weatherwidget-io{
+    border-radius: 5px;
+    border: 1.5px solid rgb(0, 0, 0);
+}
+.textWeather{
+    color:rgb(2, 2, 2);
+    border-radius: 5px 0px 0px 5px;
+    background-color: rgba(255, 255, 255, 0.555);
+}
+.weather{
+    border-radius: 0px 5px 5px 0px;
+}
+@media only screen and (max-width:993px){
+    .timeContainer{
+        display: table;
+    }
+    #setTimezone{
+        display: table-cell;
+        margin-left: auto;   
+       margin-right: auto;
+    }
+    .textWeather{
+        border-radius: 5px;
+
+    }
+}
+  @media only screen and (min-width:992px){
+.timeContainer{
+    display: flex;
+    }
+.textTime{
+    flex:0 60%;
+}
+.time{
+    flex:1;
+    padding-top: 15px;
+    text-align: right;
+}
+.weather{
+    background-color: rgba(255, 255, 255, 0.555);
+}
+.weatherContainer{
+    display: flex;    
+}
+.textWeather{
+    flex:0 60%;
+}
+.weather{
+    flex:1;   
+}
+.alignWeather{
+    margin-top: 5%;
+    padding-right: 6px;
+}
+}
+#loadingImg{
+    height: 50px;
+}

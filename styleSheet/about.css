@@ -1,0 +1,189 @@
+@font-face{
+    font-family: 'Muli Semi-Bold Italic';
+    src: url('Fonts/Muli-SemiBold-Italic.ttf.eot');
+src: url('Fonts/Muli-SemiBold-Italic.ttf.eot?#iefix') format('embedded-opentype'),
+url('Fonts/Muli-SemiBold-Italic.ttf.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+.bodyLoading{
+    overflow: hidden;
+    background-color: rgb(26, 25, 25);
+    transition: 0.3sec;
+}
+.loading{
+    animation: 1s ease-out 0s 1 slideInFromTop;
+}
+.displayNone{
+    display: none;
+}
+
+@keyframes slideInFromTop{
+    0%{
+        transform: translateY(-100%);
+        visibility: visible;    }
+    100%{
+        transform: translateY(0%);
+        visibility: visible;   
+ }
+}
+@keyframes slideInFromSide{
+    0%{
+        transform:translateX(-100%);
+        visibility: visible;
+    }
+    100%{
+        transform:translateX(0%);
+        visibility: visible;
+    }
+}
+img:not(.imgAboutMe):not(#loadingImg){
+    border-radius: 5px;
+    position: relative;
+    height: 29px;
+    top:4.5px
+}
+h1{
+    padding-left: 4px;
+    margin-left: 4px;
+}
+h3{
+    padding-left: 8px;
+    margin-left: 8px;
+}
+.body{
+    background: url("../assets/about.jpg") no-repeat center center fixed;
+    background-size: cover;
+    overflow: auto;    font-family: 'Quicksand';
+}
+.topnav,#aboutWebsite, #aboutMe{      will-change: transform;}
+.topnav{
+    font-family: 'Muli Semi-Bold Italic';
+
+    z-index: 1;
+    background-image: url("../assets/navBar.jpg");
+    background-size: cover;
+    border-radius: 5px;
+    border: 1.5px solid rgb(0, 0, 0);
+    left: 0px;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    visibility: hidden;    
+}
+.topnavAnimation{  animation: .5s ease-out .2s 1 slideInFromTop forwards;}
+.topnav a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-right: 1.5px solid rgb(0, 0, 0);
+
+}
+.topnav a:first-child{
+    background-color: #d61454;
+
+}
+
+.topnav a:last-child{
+    border-right: 0px;
+    border-left:1.5px solid rgb(0, 0, 0);
+    background-color: #5b3189;
+    float: right;
+}
+.topnav a:hover{
+    background-color: lightcoral;
+    color: black;
+}
+.topnav a.active {
+    color: white;
+    background-color:#3e8e41;
+
+    pointer-events: none;
+
+    cursor: default;
+  }
+#aboutWebsite{
+    background: url("../assets/aboutWebsite.jpg") no-repeat center center fixed;
+    background-size: cover;
+    margin: 5px auto;
+    color: white;
+    width: 95%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1.5px solid rgb(0, 0, 0);
+    box-shadow: 5px 6px 15px #9b1e5c;
+    visibility: hidden;
+}
+.aboutWebsiteAnimation{ animation: 1s ease-out 1s 1 slideInFromSide forwards; }
+#aboutMe{
+    background: url("../assets/aboutMe.jpg") no-repeat center center fixed;
+    background-size: cover;
+    margin: 5px auto;
+    color: rgb(0, 0, 0);
+    width: 95%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1.5px solid rgb(0, 0, 0);
+    box-shadow: 5px 6px 15px #eeb29a;
+    visibility: hidden;
+}
+.aboutMeAnimation{    animation: 1s ease-out 2s 1 slideInFromSide forwards; }
+.textAboutMe{
+    background-color: rgba(255, 255, 255, 0.671);
+    border-radius: 6px;
+}
+
+@media only screen and (max-width:993px){
+    #aboutMe{
+        display: table;
+    }
+    .imgContainer{
+        text-align: center;
+    }
+}
+@media only screen and (min-width:992px){
+    #aboutMe{
+        display: flex;
+    }
+    .textAboutMe{
+        flex: 0 60%
+    }
+    .imgContainer{
+        flex:1;
+        text-align: center;
+
+    }
+}
+
+@keyframes entry{
+    0%{
+        visibility: visible;
+        transform: translateY(100%);
+    }
+    100%{
+        visibility: visible;
+        transform: translateY(0%);
+    }
+}
+footer{
+    background-color: black;
+    margin-right: 4px;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 5px 5px 0px 0px;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    visibility: hidden;
+    width: 98%;
+}
+.footerAnimation{
+    animation: 0.5s ease-in 3s 1 entry forwards;
+}
+
+#loadingImg{
+    height: 50px;
+}

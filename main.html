@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="stylesheet" type="text/css" href="styleSheet/main.css">
+    <title>The-Vitals</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+</head>
+<body id="bodyId">
+    <div class="topnav" id="id1">
+        <a class="active" href="main.html">Home</a>
+        <a href="about.html" class="second">About</a>
+        <a href="support.html">Supported by</a>
+    </div>
+    <br/>
+<div class="container" id="id2">
+    <div class="welcome"><h2>Yo <img src="assets/yo.png">, Welcome to this site <span id="userName"></span> <img src="assets/smile.png">.<br/>A Friendly reminder, "It takes Courage to live a Human Life". With no Doubt, Life is Beautiful and full of Celebrations. But it is not always easy, it has problems too, and the challenge lies in Facing them with Courage.<br/> Now let's walk-through the some of important factors that you should consider in your Life. </h1>
+    <script src="js/userName.js" type="text/javascript"></script>
+</div>
+    
+</div>    <br/>
+
+<div class="timeContainer" id="id3">
+    <div class="textTime">
+        <h1>Time <img src="assets/time.png"></h1>
+        <h3>If we were to take care of our minutes then the ‘hours’ and ‘days’ will take care of themselves. It is said that ‘Time is more precious than money’. This is because money lost in business or otherwise, can be gained or earned again. But time once lost, can never come back.<br/>"The key is in not spending time, but in investing it." – Stephen R. Covey.</h2>
+    </div>
+    <div class="time" >
+        <iframe scrolling="no" id="setTimezone" frameborder="no" clocktype="html5" style="overflow:hidden;padding: 2px;margin:0 auto;padding:0;width:440px;height:210px;"></iframe>        
+        <script type="text/javascript" src="js/timezone.js"></script> 
+    </div>
+</div>
+<br/>
+
+<div class="weatherContainer" id="id4">
+    
+    <div class="textWeather">
+        <h1>Environment <img src="assets/tree.png"> <img src="assets/heart.png"></h1>
+        <h3>It gives us countless benefits that we can't repay our entire life. We should always remember that, "We do not Inherit the Earth from our Ancestors; We Borrow it from our Children". Yet we seem careless while using them. <br/>“The Earth is what we all have in common.”<br/>&nbsp;&nbsp;&nbsp;&nbsp;—Wendell Berry</h3>
+    </div>
+<div class="weather" > 
+    <div class="alignWeather">
+    
+    <a class="weatherwidget-io" id="setLoc"  data-label_2="Weather" data-font="Open Sans" data-icons="Climacons Animated" data-days="3" data-theme="pure" > Weather</a>
+
+  <script src="js/createWeatherTag.js" type="text/javascript"></script>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script></div>
+</div>
+</div>    <br/>
+
+<div class="quoteContainer" id="id5">
+    <div class="textQuote">
+        <h1>Stay Motivated <img src="assets/pain.png"> <img src="assets/brain.png"></h1>
+        <h3>Lastly, always try to stay Motivated. Because it's the only way to achieve dreams and goals. Persistence Powers Passion.<br/>Here are some quotes to keep you motivated.</h3>
+    </div>
+<div id="quote"><script type="text/javascript" src="js/quote.js"> </script> 
+    <script type="text/javascript" src="js/rss-feed.js"></script> 
+</div>
+</div>    <br/>
+
+<div id="loader" style="position: fixed;top:50%;left:50%;">
+    <img src="assets/loading.svg" id="loadingImg">
+</div>  
+<script src="js/loadingMain.js" type="text/javascript"></script>
+
+</body>
+</html>
