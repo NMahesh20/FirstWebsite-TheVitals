@@ -2,11 +2,12 @@ var urlForecast="https://forecast7.com/en/20d9885d75/odisha/"
 var stateDefault="ODISHA"
 var userName="Viewer";
 $(document).ready(function(){
-    $('#userName').focus(function(){
-        
-var wid=$("#aligner").width();
+    var wid=$("#aligner").width();
 $('#userInfo').outerWidth(wid);
 $("#locInfo").outerWidth(wid);
+    $('#userName').focus(function(){
+        
+
         $('#userInfo').addClass("anime");
         setTimeout(
             function(){
