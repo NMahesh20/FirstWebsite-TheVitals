@@ -2,11 +2,10 @@ var urlForecast="https://forecast7.com/en/20d9885d75/odisha/"
 var stateDefault="ODISHA"
 var userName="Viewer";
 $(document).ready(function(){
-    var wid=$("#aligner").width();
-$('#userInfo').outerWidth(wid);
-$("#locInfo").outerWidth(wid);
+    
     $('#userName').focus(function(){
-        
+        var wid=$("#aligner").width();
+$('#userInfo').outerWidth(wid);
 
         $('#userInfo').addClass("anime");
         setTimeout(
@@ -16,6 +15,8 @@ $("#locInfo").outerWidth(wid);
         )
     });
     $('#userLoc').focus(function(){
+        var wid=$("#aligner").width();
+$("#locInfo").outerWidth(wid);
         $('#locInfo').addClass('anime');
         setTimeout(
             function(){
