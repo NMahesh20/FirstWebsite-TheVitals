@@ -38,8 +38,8 @@ $("#locInfo").outerWidth(wid);
         var query = state+" forecast7";
 
 
-        var api="AIzaSyDJlzSrE1-ZoLt0A0XNPnxqCKk2V5Uid-I";  //Google's api for Custom search
-        var searchEngine="005238064938442562638:zr6-tzoyzzu";   //Create search engine
+        var api=process.env.API;  //Google's api for Custom search
+        var searchEngine=process.env.SEARCHENGINE;   //Create search engine
         var url="https://www.googleapis.com/customsearch/v1?key="+api+"&cx="+searchEngine+"&q="+query;
         var getLink=false;
         if(state!=""){
